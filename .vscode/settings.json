@@ -1,0 +1,11 @@
+{
+    "eslint.alwaysShowStatus": true, 
+    "editor.wordWrapColumn": 220,
+    "window.zoomLevel": 0,
+    "eslint.format.enable": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.eslint": true
+    },
+    "eslint.lintTask.enable": true
+}

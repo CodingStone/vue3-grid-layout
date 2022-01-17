@@ -1,11 +1,24 @@
-# Vue 3 + Typescript + Vite
+## 技术栈
+Vue 3 + Typescript + Vite  
+基于 `interact.js` 实现拖动和调整大小
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-## Recommended IDE Setup
+## 启动方法
+`yarn install`  
+`yarn run dev` 
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+访问：http://localhost:3000/
 
-## Type Support For `.vue` Imports in TS
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+
+## 已完成（使用的最小单元）
+1. 拖动功能
+2. 调整大小功能
+3. 静态部件(不可拖拽、调整大小)
+4. 拖拽边界进行检查
+
+## 待完成
+1. 增减部件避免重建栅格
+2. 支持自适应...
+3. 响应式
+   

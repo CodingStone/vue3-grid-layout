@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, onMounted, reactive, ref, watch, provide } from 'vue';
+import { nextTick, onMounted, reactive, ref, watch, provide, onUnmounted } from 'vue';
 import { Layout, EventType } from './../helpers/types';
 import GridItem from './GridItem.vue';
 import { compact, getLayoutItem, moveElement, getAllCollisions } from './../helpers/utils';
@@ -277,11 +277,25 @@ watch(
         reLayout();
     }
 );
-
+onUnmounted(async () => {
+    // window.onresize = null;
+});
 //hooks
 onMounted(async () => {
     emit('layout-mounted', state.layout);
     getLayoutWidth();
+    // let bAntiShike = false;
+    // window.onresize = () => {
+    //     if (!bAntiShike) {
+    //         bAntiShike = true;
+    //         setTimeout(() => {
+    //             updateHeight();
+    //             reLayout();
+    //             state.updateCounter++;
+    //             bAntiShike = false;
+    //         }, 300);
+    //     }
+    // };
 });
 </script>
 
